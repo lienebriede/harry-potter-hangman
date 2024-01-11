@@ -2,13 +2,14 @@ import random
 
 wordList = ["unicorn", "phoenix"]
 triedLetters =[]
+tries = 3
 
 #takes a random word from the list
 word = random.choice(wordList)
 
 #prints the word
 for i in word:
-    print("_", end="")
+    print("_", end=" ")
 
 print()
 print()
@@ -27,6 +28,9 @@ while True:
         print("Yep! It's in there!")
     else:
         print("Nope, not in there!")
+        #takes off score
+        tries -= 1
+        print(f"You've got {tries} tries left!")
 
     #need this boolean to check if word is guessed and break out of the loop    
     gotAllLetters = True    
@@ -34,15 +38,17 @@ while True:
     #prints the guessed letters that are in the word
     for i in word:
         if i in triedLetters:
-            print(i, end="")
+            print(i, end=" ")
         else:
-            print("_", end="")
+            print("_", end=" ")
             gotAllLetters = False
 
-    #breaks out of the loop
+    #breaks out of the loop, guessed word
     if gotAllLetters:
         print("You guessed the word!")
         break
-    
-
+    #breaks out of the loop, out of tries
+    if tries <= 0:
+        print(f"Too bad! No more tries left!")
+        break
 
