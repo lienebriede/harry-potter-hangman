@@ -1,7 +1,12 @@
-import random, os, time
+import random
+import os
+import time
 
 def play():
-
+    """
+    This is the game code, provides a random word,
+    checks user input, keeps score
+    """
     wordList = ["unicorn", "phoenix"]
     triedLetters =[]
     tries = 3
@@ -55,24 +60,30 @@ def play():
         #breaks out of the loop, guessed word
         if gotAllLetters:
             print("You guessed the word!")
-            break
+            playAgain()
         #breaks out of the loop, out of tries
         if tries <= 0:
             print(f"Too bad! No more tries left!")
-            break
+            playAgain()
         else:
             if tries == 1:
                 print(f"You've got only {tries} try left!!")
             else:
                 print(f"You've got {tries} tries left!")
 
-while True:
-    again = input("Play again? y/n > ").lower()
-    if again == "y":
-        play()
-    elif again == "n":
-        print("OK! Hope you enjoyed it!")
-        break
-    else:
-        print("I didn't understand that. Play again? y/n > ")  
+def playAgain():
+    """
+    User chooses to play another word or stop
+    """
+    while True:
+        again = input("Play again? y/n > ").lower()
+        if again == "y":
+            play()
+        elif again == "n":
+            print("OK! Hope you enjoyed it!")
+            break
+        else:
+            print("I didn't understand that. Play again? y/n > ") 
+
+play() 
 
