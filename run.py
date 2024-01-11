@@ -30,7 +30,6 @@ while True:
         print("Nope, not in there!")
         #takes off score
         tries -= 1
-        print(f"You've got {tries} tries left!")
 
     #need this boolean to check if word is guessed and break out of the loop    
     gotAllLetters = True    
@@ -51,4 +50,9 @@ while True:
     if tries <= 0:
         print(f"Too bad! No more tries left!")
         break
+    else:
+        if tries == 1:
+            print("Last try!!!")
+        else:
+            print(f"You've got {tries} tries left!")
 
