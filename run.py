@@ -1,4 +1,4 @@
-import random
+import random, os, time
 
 wordList = ["unicorn", "phoenix"]
 triedLetters =[]
@@ -6,6 +6,13 @@ tries = 3
 
 #takes a random word from the list
 word = random.choice(wordList)
+
+print(f"You have {tries} tries to guess the word!")
+time.sleep(2)
+os.system("clear")
+
+print("Your word is:")
+print()
 
 #prints the word
 for i in word:
@@ -16,6 +23,7 @@ print()
 
 while True:
     letter = input("Guess a letter > ").lower()
+    os.system("clear")
     
     if letter in triedLetters:
         print("You tried that one already!")
@@ -55,4 +63,5 @@ while True:
             print("Last try!!!")
         else:
             print(f"You've got {tries} tries left!")
+
 
