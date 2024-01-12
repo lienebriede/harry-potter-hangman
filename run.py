@@ -2,8 +2,9 @@ import random
 import os
 import time
 from wordlist import wordList
+from title import title
 
-
+print(f"\033[33m{title}")
 def randomWord():
     """
     Takes a random word from the list
@@ -24,8 +25,8 @@ def play():
     word = randomWord()
 
     print(f"You have {tries} tries to guess the word!")
-    time.sleep(2)
-    os.system("clear")
+    #time.sleep(2)
+    #os.system("clear")
 
     print("Your word is:")
     print()
