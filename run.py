@@ -22,7 +22,6 @@ def play():
 
     
     word = randomWord()
-    print(word)
 
     print(f"You have {tries} tries to guess the word!")
     time.sleep(2)
@@ -70,21 +69,24 @@ def play():
         #breaks out of the loop, guessed word
         if gotAllLetters:
             print("You guessed the word!")
-            playAgain()
+            break
         #breaks out of the loop, out of tries
         if tries <= 0:
             print(f"Too bad! No more tries left!")
-            playAgain()
+            break
         else:
             if tries == 1:
                 print(f"You've got only {tries} try left!!")
             else:
                 print(f"You've got {tries} tries left!")
+           
 
-def playAgain():
+def start():
     """
-    User chooses to play another word or stop
+    Starts the game and after finishing
+    user chooses to play another word or stop
     """
+    play()
     while True:
         again = input("Play again? y/n > ").lower()
         if again == "y":
@@ -95,5 +97,6 @@ def playAgain():
         else:
             print("I didn't understand that. Play again? y/n > ") 
 
-play() 
+start() 
+
 
