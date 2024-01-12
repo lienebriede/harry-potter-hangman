@@ -1,13 +1,14 @@
 import random
 import os
 import time
+from wordlist import wordList
 
 def play():
     """
     This is the game code, provides a random word,
     checks user input, keeps score
     """
-    wordList = ["unicorn", "phoenix"]
+    
     triedLetters =[]
     tries = 3
 
