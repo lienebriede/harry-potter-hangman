@@ -3,6 +3,14 @@ import os
 import time
 from wordlist import wordList
 
+
+def randomWord():
+    """
+    Takes a random word from the list
+    """
+    word = random.choice(wordList)
+    return word
+
 def play():
     """
     This is the game code, provides a random word,
@@ -12,8 +20,9 @@ def play():
     triedLetters =[]
     tries = 3
 
-    #takes a random word from the list
-    word = random.choice(wordList)
+    
+    word = randomWord()
+    print(word)
 
     print(f"You have {tries} tries to guess the word!")
     time.sleep(2)
