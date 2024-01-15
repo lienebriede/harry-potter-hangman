@@ -2,9 +2,9 @@ import random
 import os
 import time
 from wordlist import wordList
-from title import title
+from title2 import title2
 
-print(f"\033[33m{title}\033[0m")
+print(f"\033[33m{title2}\033[0m")
 def randomWord():
     """
     Takes a random word from the list
