@@ -4,7 +4,7 @@ import time
 from wordlist import wordList
 from title import title
 
-print(f"\033[33m{title}")
+print(f"\033[33m{title}\033[0m")
 def randomWord():
     """
     Takes a random word from the list
@@ -44,24 +44,39 @@ def play():
         
         if letter in triedLetters:
             print("You tried that one already!")
+            #prints the word
+            for i in word:
+                if i in triedLetters or word in triedLetters:
+                    print(i, end=" ")
+                else:
+                    print("_", end=" ")
             continue
 
         #adds picked letters to the list    
         triedLetters.append(letter)
 
-        if letter in word:
-            print("Yep! It's in there!")
+        #checks both - input letter and input word
+        if len(letter) == 1:
+            if letter in word:
+                print("Yep! It's in there!")
+            else:
+                print("Nope, not in there!")
+                #takes off score
+                tries -= 1
         else:
-            print("Nope, not in there!")
-            #takes off score
-            tries -= 1
+            if letter == word:
+                print("Yep! That's it!")
+            else:
+                print("Nope, not right!")
+                #takes off score
+                tries -= 1
 
         #need this boolean to check if word is guessed and break out of the loop    
         gotAllLetters = True    
         
         #prints the guessed letters that are in the word
         for i in word:
-            if i in triedLetters:
+            if i in triedLetters or word in triedLetters:
                 print(i, end=" ")
             else:
                 print("_", end=" ")
@@ -73,7 +88,7 @@ def play():
             break
         #breaks out of the loop, out of tries
         if tries <= 0:
-            print(f"Too bad! No more tries left!")
+            print(f"Too bad! No more tries left! The word was {word}.")
             break
         else:
             if tries == 1:
