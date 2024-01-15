@@ -23,6 +23,8 @@ def play():
 
     
     word = randomWord()
+    #reveals the first letter
+    triedLetters.append(word[0])
 
     print(f"You have {tries} tries to guess the word!")
     #time.sleep(2)
@@ -33,7 +35,10 @@ def play():
 
     #prints the word
     for i in word:
-        print("_", end=" ")
+        if i in triedLetters or word in triedLetters:
+            print(i, end=" ")
+        else:
+            print("_", end=" ")
 
     print()
     print()
