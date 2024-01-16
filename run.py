@@ -1,11 +1,14 @@
+#librairies
 import random
 import os
 import time
+
+#other files
 from spellsList import spells
 from beastsList import beasts
 from darkArtsList import darkArts
 from title2 import title2
-from score import score
+from score import nagini
 
 #print(score[0], score[1], score[2], score[3])
 
@@ -79,9 +82,16 @@ def play():
     triedLetters =[]
     tries = 3
 
+    #categories
     category = chooseCategory()
+
+    #score at 0 position
+    print(nagini(tries))
+
+    #gives random word
     word = randomWord(category)
-    #reveals the first letter
+
+    #reveals the first letter (and others if the same)
     triedLetters.append(word[0])
 
     print(f"You have {tries} tries to guess the word!")
@@ -106,7 +116,9 @@ def play():
         os.system("clear")
         
         if letter in triedLetters:
-            print("You tried that one already!")
+            #prints score
+            print(nagini(tries))
+            print("Didn't you try that one? Or it's already in there!")
             #prints the word
             for i in word:
                 if i in triedLetters or word in triedLetters:
@@ -114,26 +126,28 @@ def play():
                 else:
                     print("_", end=" ")
             continue
-
         #adds picked letters to the list    
         triedLetters.append(letter)
-
+        
         #checks both - input letter and input word
         if len(letter) == 1:
-            if letter in word:
+            if letter in word:  
+                print(nagini(tries))
                 print("Yep! It's in there!")
             else:
+                tries -= 1       
+                print(nagini(tries))
                 print("Nope, not in there!")
-                #takes off score
-                tries -= 1
-        else:
+        else:       
             if letter == word:
+                print(nagini(tries))
                 print("Yep! That's it!")
             else:
+                tries -= 1     
+                print(nagini(tries))
                 print("Nope, not right!")
-                #takes off score
-                tries -= 1
 
+        
         #need this boolean to check if word is guessed and break out of the loop    
         gotAllLetters = True    
         
@@ -173,8 +187,8 @@ def start():
             os.system("clear")
             play()
         elif again == "n":
-            print("OK! Hope you enjoyed it!")
             os.system("clear")
+            print("OK! Hope you enjoyed it!")
             break
         else:
             print("I didn't understand that. Play again? y/n > ")
