@@ -1,14 +1,19 @@
 import random
 import os
 import time
-from wordlist import wordList
+from spellsList import spells
+from beastsList import beasts
+from darkArtsList import darkArts
 from title2 import title2
 from score import score
 
-print(score[0], score[1], score[2], score[3])
+#print(score[0], score[1], score[2], score[3])
 
 def title():
-    print(f"\033[33m{title2:^30}\033[0m")
+    """
+    This is the title page with rules
+    """
+    print(f"\033[33m{title2}\033[0m")
     print("Here are the rules!")
     print("Here are the rules! Here are the rules!")
     print("Here are the rules! Here are the rules!")
@@ -16,20 +21,53 @@ def title():
     print("Here are the rules! Here are the rules!")
     print("Here are the rules! Here are the rules!")
     print("Here are the rules! Here are the rules!")
-    enter = input("Press enter to start the game...")
-    if enter == "":
-        os.system("clear")
-        chooseCategory()
-    else:
-        print("Press enter to start the game...")
+    while True:
+        enter = input("Press enter to start the game...")
+        if enter == "":
+            os.system("clear")
+            break
+        else:
+            continue
 
-#def chooseCategory():
-    
-def randomWord():
+def chooseCategory():
     """
-    Takes a random word from the list
+    Allows user to choose a word 
+    from 3 different categories
     """
-    word = random.choice(wordList)
+    while True:
+        print("Choose your category:")
+        select = input("Press 1 for Spells\nPress 2 for Magical Creatures and Beasts\nPress 3 for Dark Arts\n> ")
+        if select == "1":
+            category = "spells"
+            os.system("clear")
+            break
+        elif select == "2":
+            category = "beasts"
+            os.system("clear")
+            break
+        elif select == "3":
+            category = "dark"
+            os.system("clear")
+            break
+        else:
+            os.system("clear")
+            print("I didn't understand that. Try again!")
+            
+    return category
+
+def randomWord(category):
+    """
+    Takes a random word from a list
+    from a category that user chose to play
+    """
+    if category == "spells":
+        list = spells
+    elif category == "beasts":
+        list = beasts
+    elif category == "dark":
+        list = darkArts 
+
+    word = random.choice(list)
     return word
 
 def play():
@@ -41,8 +79,8 @@ def play():
     triedLetters =[]
     tries = 3
 
-    
-    word = randomWord()
+    category = chooseCategory()
+    word = randomWord(category)
     #reveals the first letter
     triedLetters.append(word[0])
 
@@ -127,17 +165,21 @@ def start():
     Starts the game and after finishing
     user chooses to play another word or stop
     """
+    title()
     play()
     while True:
         again = input("Play again? y/n > ").lower()
         if again == "y":
+            os.system("clear")
             play()
         elif again == "n":
             print("OK! Hope you enjoyed it!")
+            os.system("clear")
             break
         else:
-            print("I didn't understand that. Play again? y/n > ") 
-title()
+            print("I didn't understand that. Play again? y/n > ")
+            os.system("clear")
+
 start() 
 
 
