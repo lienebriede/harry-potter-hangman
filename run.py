@@ -2,9 +2,29 @@ import random
 import os
 import time
 from wordlist import wordList
+from title2 import title2
 from score import score
 
 print(score[0], score[1], score[2], score[3])
+
+def title():
+    print(f"\033[33m{title2:^30}\033[0m")
+    print("Here are the rules!")
+    print("Here are the rules! Here are the rules!")
+    print("Here are the rules! Here are the rules!")
+    print("Here are the rules! Here are the rules!")
+    print("Here are the rules! Here are the rules!")
+    print("Here are the rules! Here are the rules!")
+    print("Here are the rules! Here are the rules!")
+    enter = input("Press enter to start the game...")
+    if enter == "":
+        os.system("clear")
+        chooseCategory()
+    else:
+        print("Press enter to start the game...")
+
+#def chooseCategory():
+    
 def randomWord():
     """
     Takes a random word from the list
@@ -117,7 +137,7 @@ def start():
             break
         else:
             print("I didn't understand that. Play again? y/n > ") 
-
+title()
 start() 
 
 
