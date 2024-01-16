@@ -12,7 +12,7 @@ def nagini(tries):
                 '-----<   
                |vv|     /\
                 \vv\____\v\
-                 \v_v_v_v_v_\  
+                 \v_v_v_v_v\  
     """,
     
     r"""
