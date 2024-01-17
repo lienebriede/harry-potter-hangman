@@ -1,6 +1,7 @@
 #librairies
 import random
 import os
+import sys
 import time
 
 #other files
@@ -118,7 +119,7 @@ def play():
         if letter in triedLetters:
             #prints score
             print(nagini(tries))
-            print("Didn't you try that one? Or maybe it's already in there?!")
+            print("Didn't you try that one? Or maybe it's already in there?! Try again!")
             print()
             #prints the word
             for i in word:
@@ -128,18 +129,26 @@ def play():
                     print("_", end=" ")
             print()
             print()
+            if tries == 1:
+                print(f"\033[31mOnly {tries} wrong try and Nagini wakes up!!!\033[0m")
+                print()
+            else:
+                print(f"\033[31m{tries} wrong tries and Nagini wakes up!\033[0m")
+                print()
             continue
+            
         #adds picked letters to the list    
         triedLetters.append(letter)
         
         #checks both - input letter and input word
+        #prints score and a message
         if len(letter) == 1:
             if letter in word:  
                 print(nagini(tries))
                 print("Yep! It's in there!")
                 print()
             else:
-                tries -= 1       
+                tries -= 1     
                 print(nagini(tries))
                 print("Nope, not in there!")
                 print()
@@ -207,7 +216,8 @@ def start():
             os.system("clear")
             print("I didn't understand that.")
             
-
-start() 
+os.system("clear")
+start()
+ 
 
 
