@@ -226,5 +226,4 @@ def start():
 Runs the program
 """
 if __name__ == "__main__":
-    os.system("clear")
     start()
