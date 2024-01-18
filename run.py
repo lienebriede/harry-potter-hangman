@@ -10,17 +10,17 @@ def show_title():
     print(f"\033[33m{title}\033[0m")
     print("Here are the rules!")
     print(
-        "Guess the given word either letter by letter"
+        "Guess the given word either letter by letter",
         "or the whole word at once!"
         )
     print("There are 3 categories you can choose from.")
     print(
-        "The first letter is always given"
-        "(and if that same letter repeats in the word,"
+        "The first letter is always given",
+        "(and if that same letter repeats in the word,",
         "that is given too)!"
         )
     print(
-        "You're only allowed 3 wrong guesses"
+        "You're only allowed 3 wrong guesses",
         "before Nagini wakes up and you lose."
         )
     print("Don't know what Nagini is? Well, good luck then!")
@@ -42,8 +42,8 @@ def choose_category():
     while True:
         print("Choose your category:")
         select = input(
-            "Press 1 for Spells\n"
-            "Press 2 for Magical Creatures and Beasts\n"
+            "Press 1 for Spells\n",
+            "Press 2 for Magical Creatures and Beasts\n",
             "Press 3 for Dark Arts\n> "
             )
         if select == "1":
@@ -121,7 +121,7 @@ def play():
             # prints score
             print(nagini(tries))
             print(
-                "Didn't you try that one? Or maybe it's already in there?! "
+                "Didn't you try that one? Or maybe it's already in there?!",
                 "Try again!\n"
                 )
 
@@ -133,12 +133,12 @@ def play():
                     print("_", end=" ")
             if tries == 1:
                 print(
-                    f"\n\n\033[31mOnly {tries} wrong try "
+                    f"\n\n\033[31mOnly {tries} wrong try",
                     "and Nagini wakes up!!!\033[0m\n"
                     )
             else:
                 print(
-                    f"\n\n\033[31m{tries} wrong tries "
+                    f"\n\n\033[31m{tries} wrong tries",
                     "and Nagini wakes up!\033[0m\n"
                     )
             continue
@@ -184,19 +184,19 @@ def play():
         # breaks out of the loop, out of tries
         if tries <= 0:
             print(
-                "\n\nToo bad! No more tries left!\n"
+                "\n\nToo bad! No more tries left!\n",
                 f"The word was \033[36m{word}\033[0m.\n"
                 )
             break
         else:
             if tries == 1:
                 print(
-                    f"\n\n\033[31mOnly {tries} wrong try "
+                    f"\n\n\033[31mOnly {tries} wrong try",
                     "and Nagini wakes up!!!\033[0m\n"
                     )
             else:
                 print(
-                    f"\n\n\033[31m{tries} wrong tries "
+                    f"\n\n\033[31m{tries} wrong tries",
                     "and Nagini wakes up!\033[0m\n"
                     )
 
