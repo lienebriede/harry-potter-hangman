@@ -206,7 +206,6 @@ def start():
     Starts the game and after finishing
     user chooses to play another word or stop
     """
-    os.system("clear")
     show_title()
     play()
     while True:
@@ -227,4 +226,5 @@ def start():
 Runs the program
 """
 if __name__ == "__main__":
+    os.system("clear")
     start()

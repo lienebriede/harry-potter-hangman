@@ -25,23 +25,23 @@ This is a simple word guessing game. Players can guess the word letter by letter
 
 To make it more fun and appealing for the players I have added some visuals and colors. 
 - The title:
+![title page](documentation/title.png)
 - Instead of the classic hangman image I designed an image of a snake that is sleeping and gradually wakes up if the player makes 3 wrong guesses:
-- I have also added some color to the text:
+![score display](documentation/score.png)
+- I have also added some color to the text.
 
 ## Features
 
 The game presents the player with a random word to guess depending on the chosen category. There are three categories the player can choose from:
+![game play](documentation/play.png)
+The player can make 3 wrong guesses before they lose the game. In addition to the sleeping snake (described above) there is a message displayed keeping track of available attempts.
 
-The player can make 3 wrong guesses before they lose the game. In addition to the sleeping snake (described above) there is a message displayed keeping track of available attempts:
-
- 
-If the player guesses a letter correctly, the game continues until the word is guessed or they lose. If the player inputs the same letter or the same word repeatedly, the score stays the same and they continue guessing:
-
+If the player guesses a letter correctly, the game continues until the word is guessed or they lose. If the player inputs the same letter or the same word repeatedly, the score stays the same and they continue guessing.
 When the player guesses the word or loses, they can choose to play again or stop playing:
-
+![play again display](documentation/again.png)
 If they choose to play again, they can pick a new category and play the new random word.
-
-Game rules are presented before starting the game. Only when the player presses "enter" the game starts.
+Game rules are presented before starting the game. Only when the player presses "enter" the game starts:
+![alt text](documentation/rules.png)
 
 ## Future Adaptations
 
@@ -60,11 +60,11 @@ The game can potentially grow by adding more words to it. Either to the same cat
 
 ## Testing and bugs
 
-- PEP8 online
-
-- The Website was tested on Google Chrome and Safari browsers. 
+- The code has been passed through a PEP8 linter provided by Code Institute, no errors were found.  
 
 - Friends were asked to review the site and give feedback.
+
+- No bugs are present.
 
 ## Deployment
 
@@ -74,9 +74,27 @@ The project was deployed to [Heroku](https://heroku.com/). Steps for deployment:
 1. Fork or clone this repository
 2. Create a new Heroku app
 3. Set the buildbacks to Python and NodeJs in that order
-4. Link the Heroku app to the repository
-5. Click on Deploy
+4. Add to Config Vars - key: PORT, value: 8000 
+5. Link the Heroku app to the repository
+6. Click on Deploy
 
+### Local Deployment
+
+This project can be cloned or forked to make a local copy. 
+Steps:
+- Log in to your Github.
+- Find the [Harry Potter hangman repository](https://github.com/lienebriede/harry-potter-hangman).
+
+For Cloning: 
+- Click on "Code" and select either HTTPS, SSH or GitHub CLI, copy the link to your clipboard.
+- Open Terminal.
+- Change the current working directory to the location where you want the cloned directory.
+- Type "git clone" and paste the URL you copied earlier.
+- Press Enter to create your local clone. 
+
+For Forking:
+- Click on "Fork" (top-right corner).
+- 
 
 ## Credits
 
