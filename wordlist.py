@@ -1,1 +1,0 @@
-wordList = ["unicorn", "phoenix"]

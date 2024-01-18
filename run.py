@@ -1,22 +1,13 @@
-#librairies
 import random
 import os
-import sys
-import time
-
-#other files
-from spellsList import spells
-from beastsList import beasts
-from darkArtsList import darkArts
-from title2 import title2
-from score import nagini
+from content import spells, beasts, darkArts, title, nagini
 
 
 def title():
     """
     This is the title page with rules
     """
-    print(f"\033[33m{title2}\033[0m")
+    print(f"\033[33m{title}\033[0m")
     print("Here are the rules!")
     print("Guess the given word either letter by letter or the whole word at once!")
     print("There are 3 categories you can choose from.")

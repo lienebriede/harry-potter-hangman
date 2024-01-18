@@ -66,8 +66,6 @@ The game can potentially grow by adding more words to it. Either to the same cat
 
 - Friends were asked to review the site and give feedback.
 
-## Bugs
-
 ## Deployment
 
 ### Heroku
