@@ -71,30 +71,30 @@ The game can potentially grow by adding more words to it. Either to the same cat
 ### Heroku
 
 The project was deployed to [Heroku](https://heroku.com/). Steps for deployment:
-1. Fork or clone this repository
-2. Create a new Heroku app
-3. Set the buildbacks to Python and NodeJs in that order
-4. Add to Config Vars - key: PORT, value: 8000 
-5. Link the Heroku app to the repository
-6. Click on Deploy
+1. Fork or clone this repository.
+2. Create a new Heroku app.
+3. Set the buildbacks to Python and NodeJs in that order.
+4. Add to Config Vars - key: PORT, value: 8000. 
+5. Link the Heroku app to the repository.
+6. Click on Deploy.
 
 ### Local Deployment
 
 This project can be cloned or forked to make a local copy. 
 Steps:
-- Log in to your Github.
-- Find the [Harry Potter hangman repository](https://github.com/lienebriede/harry-potter-hangman).
+1. Log in to your Github.
+2. Find the [Harry Potter hangman repository](https://github.com/lienebriede/harry-potter-hangman).
 
-For Cloning: 
-- Click on "Code" and select either HTTPS, SSH or GitHub CLI, copy the link to your clipboard.
-- Open Terminal.
-- Change the current working directory to the location where you want the cloned directory.
-- Type "git clone" and paste the URL you copied earlier.
-- Press Enter to create your local clone. 
+Cloning: 
+1. Click on "Code" and select either HTTPS, SSH or GitHub CLI, copy the link to your clipboard.
+2. Open Terminal.
+3. Change the current working directory to the location where you want the cloned directory.
+4. Type "git clone" and paste the URL you copied earlier.
+5. Press Enter to create your local clone. 
 
-For Forking:
-- Click on "Fork" (top-right corner).
-- 
+Forking:
+1. Click on "Fork" (top-right corner).
+2. Name the new repository and click on "Create fork". 
 
 ## Credits
 
