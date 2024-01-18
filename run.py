@@ -16,9 +16,9 @@ def show_title():
     print("There are 3 categories you can choose from.")
     print(
         "The first letter is always given",
-        "(and if that same letter repeats in the word,",
-        "that is given too)!"
+        "(and if that same letter repeats"
         )
+    print("in the word, that is given too)!")
     print(
         "You're only allowed 3 wrong guesses",
         "before Nagini wakes up and you lose."
@@ -42,8 +42,8 @@ def choose_category():
     while True:
         print("Choose your category:")
         select = input(
-            "Press 1 for Spells\n",
-            "Press 2 for Magical Creatures and Beasts\n",
+            "Press 1 for Spells\n"
+            "Press 2 for Magical Creatures and Beasts\n"
             "Press 3 for Dark Arts\n> "
             )
         if select == "1":
