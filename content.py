@@ -20,7 +20,7 @@ beasts = [
     "kappa", "flobberworm", "elf"
 ]
 
-darkArts = [
+dark_arts = [
     "horcrux", "voldemort", "slytherin", "parseltongue",
     "azkaban", "dementor", "mudblood", "umbridge",
     "lestrange", "grindelwald", "sectumsempra", "nagini",
